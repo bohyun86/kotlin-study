@@ -32,4 +32,11 @@ fun main() {
     // 반드시 매개변수 이름을 지정하여 호출해야 함.
     printNumbersWithSuffix(1,2,3, suffix = "개")
     printNumbersWithSuffix(4,5,6, suffix = "자루")
+
+    // 가변인자를 배열로 전달
+    val ints = intArrayOf(7, 8, 9)
+    // printNumbers(ints)       배열을 직접 X
+    // 스프레드 연산자(*)을 인자 앞에 표시하여 배열 값을 전달
+    printNumbers(*ints)
+    printNumbersWithSuffix(*ints, suffix = "통")
 }
